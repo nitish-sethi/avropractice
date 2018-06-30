@@ -1,0 +1,21 @@
+{
+"namespace": "my.pkg.path.avro",
+"type" : "record",
+"name" : "PeopleList",
+         "fields" : [
+{"name" : "Version", "type" : "int"},
+{"name" : "People", "type" : {
+                             "namespace" : "my.pkg.path.avro",
+                             "type" : "array",
+                             "items" : {
+                                       "type" : "record",
+                                       "namespace": "my.pkg.path.avro",
+                                       "name" : "Person",
+                                                "fields" : [
+                                       {"name" : "FirstName", "type" : "string"},
+                                       {"name" : "LastName", "type" : "string"}
+                                       ]
+                                       }}
+}
+]
+}
